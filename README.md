@@ -123,23 +123,6 @@ Our models are evaluated extensively on 15+ datasets including challening domain
 
 [» Full list of pretrained models](https://www.sbert.net/docs/pretrained_models.html)
 
-## Application Examples
-
-You can use this framework for:
-
-- [Computing Sentence Embeddings](https://www.sbert.net/examples/applications/computing-embeddings/README.html)
-- [Semantic Textual Similarity](https://www.sbert.net/docs/usage/semantic_textual_similarity.html)
-- [Clustering](https://www.sbert.net/examples/applications/clustering/README.html)
-- [Paraphrase Mining](https://www.sbert.net/examples/applications/paraphrase-mining/README.html)
- - [Translated Sentence Mining](https://www.sbert.net/examples/applications/parallel-sentence-mining/README.html)
- - [Semantic Search](https://www.sbert.net/examples/applications/semantic-search/README.html)
- - [Retrieve & Re-Rank](https://www.sbert.net/examples/applications/retrieve_rerank/README.html) 
- - [Text Summarization](https://www.sbert.net/examples/applications/text-summarization/README.html) 
-- [Multilingual Image Search, Clustering & Duplicate Detection](https://www.sbert.net/examples/applications/image-search/README.html)
-
-and many more use-cases.
-
-For all examples, see [examples/applications](https://github.com/UKPLab/sentence-transformers/tree/master/examples/applications).
 
 ## Citing & Authors
 

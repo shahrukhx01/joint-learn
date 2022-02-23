@@ -16,7 +16,7 @@
 [#docs-package]: https://www.sbert.net/
 <!--- BADGES: END --->
 
-# Sentence Transformers: Multilingual Sentence, Paragraph, and Image Embeddings using BERT & Co.
+# Joint Learn: A python package for representation and task-specific transfer learning
 
 This framework provides an easy method to compute dense vector representations for **sentences**, **paragraphs**, and **images**. The models are based on transformer networks like BERT / RoBERTa / XLM-RoBERTa etc. and achieve state-of-the-art performance in various task. Text is embedding in vector space such that similar text is close and can efficiently be found using cosine similarity.
 

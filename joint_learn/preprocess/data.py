@@ -230,20 +230,20 @@ class JLData:
         """
         return [self.vocab.stoi[token.lower()] for token in self.tokenizer(sentence)]
 
-    def pad_sequences(self, vectorized_sents_1, sents1_lengths):
+    def pad_sequences(self, vectorized_text, text_lengths):
         """
         Pads zeros at the end of each sequence in data tensor till max
         length of sequence in that batch
         """
         max_len = self.max_sequence_len
         if self.model_name == "lstm":
-            max_len = sents1_lengths.max()
+            max_len = text_lengths.max()
 
         padded_sequence_tensor = torch.zeros(
-            (len(vectorized_sents_1), max_len)
+            (len(vectorized_text), max_len)
         ).long()  ## init zeros tensor
         for idx, (seq, seqlen) in enumerate(
-            zip(vectorized_sents_1, sents1_lengths)
+            zip(vectorized_text, text_lengths)
         ):  ## iterate over each sequence
             padded_sequence_tensor[idx, :seqlen] = torch.LongTensor(
                 seq

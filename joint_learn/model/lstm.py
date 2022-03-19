@@ -6,7 +6,7 @@ from torch.nn.utils.rnn import pack_padded_sequence, pad_packed_sequence
 
 """
 Wrapper class using Pytorch nn.Module to create the architecture for our 
-binary classification model
+joint learning classification model
 """
 
 

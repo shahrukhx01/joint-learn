@@ -41,35 +41,24 @@ def train_model(model, optimizer, dataloaders, max_epochs, config_dict):
                 loss = None
 
                 ## perform forward pass
-                if config_dict["model_name"] == "siamese_lstm_attention":
-                    (
-                        pred,
-                        sent1_annotation_weight_matrix,
-                        sent2_annotation_weight_matrix,
-                    ) = model(
-                        sent1.to(device),
-                        sent2.to(device),
-                        sents1_len.to(device),
-                        sents2_len.to(device),
+                if config_dict["model_name"] == "jl_lstm_attention":
+                    pred, annotation_weight_matrix = model(
+                        batch.to(device),
+                        lengths.to(device),
+                        dataset_name,
                     )
-                    sent1_attention_loss = attention_penalty_loss(
-                        sent1_annotation_weight_matrix,
+                    attention_loss = attention_penalty_loss(
+                        annotation_weight_matrix,
                         config_dict["self_attention_config"]["penalty"],
                         device,
                     )
-                    sent2_attention_loss = attention_penalty_loss(
-                        sent2_annotation_weight_matrix,
-                        config_dict["self_attention_config"]["penalty"],
-                        device,
-                    )
+
                     ## compute loss
                     loss = (
                         criterion(
-                            pred.to(device),
-                            torch.autograd.Variable(targets.float()).to(device),
+                            pred.to(device), torch.autograd.Variable(targets).to(device)
                         )
-                        + sent1_attention_loss
-                        + sent2_attention_loss
+                        + attention_loss
                     )
                 else:
                     pred = model(
@@ -148,35 +137,24 @@ def evaluate_dev_set(model, criterion, data_loaders, config_dict, device):
             loss = None
 
             ## perform forward pass
-            if config_dict["model_name"] == "siamese_lstm_attention":
-                (
-                    pred,
-                    sent1_annotation_weight_matrix,
-                    sent2_annotation_weight_matrix,
-                ) = model(
-                    sent1.to(device),
-                    sent2.to(device),
-                    sents1_len.to(device),
-                    sents2_len.to(device),
+            if config_dict["model_name"] == "jl_lstm_attention":
+                (pred, annotation_weight_matrix,) = model(
+                    batch.to(device),
+                    lengths.to(device),
+                    dataset_name,
                 )
-                sent1_attention_loss = attention_penalty_loss(
-                    sent1_annotation_weight_matrix,
+                attention_loss = attention_penalty_loss(
+                    annotation_weight_matrix,
                     config_dict["self_attention_config"]["penalty"],
                     device,
                 )
-                sent2_attention_loss = attention_penalty_loss(
-                    sent2_annotation_weight_matrix,
-                    config_dict["self_attention_config"]["penalty"],
-                    device,
-                )
+
                 ## compute loss
                 loss = (
                     criterion(
-                        pred.to(device),
-                        torch.autograd.Variable(targets.float()).to(device),
+                        pred.to(device), torch.autograd.Variable(targets).to(device)
                     )
-                    + sent1_attention_loss
-                    + sent2_attention_loss
+                    + attention_loss
                 )
             else:
                 pred = model(

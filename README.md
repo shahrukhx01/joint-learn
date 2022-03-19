@@ -3,15 +3,11 @@
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/sentence-transformers?logo=pypi&style=flat&color=blue)][#pypi-package]
 [![PyPI - Package Version](https://img.shields.io/pypi/v/sentence-transformers?logo=pypi&style=flat&color=orange)][#pypi-package]
 
-[#github-license]: https://github.com/UKPLab/sentence-transformers/blob/master/LICENSE
-[#pypi-package]: https://pypi.org/project/sentence-transformers/
-[#conda-forge-package]: https://anaconda.org/conda-forge/sentence-transformers
-[#docs-package]: https://www.sbert.net/
 <!--- BADGES: END --->
 
 # Joint Learn: A python toolkit for task-specific weight sharing for sequence classification
 
-Transfer Learning has achieved state-of-the-art results recently in Machine Learning and specially, Natural Language Processing tasks. However, for low resource corporas where there is a lack of pre-trained model checkpoints available. We propose `Joint Learn` which leverage task specific weight-sharing for training multiple sequence classification tasks simulataneously and has empirically showed resulting in more generalizable models. `Joint Learn` is a PyTorch based comprehensive toolkit for weight-sharing in text classification settings.
+Transfer Learning has achieved state-of-the-art results recently in Machine Learning and specially, Natural Language Processing tasks. However, for low resource corporas where there is a lack of pre-trained model checkpoints available. We propose `Joint Learn` which leverages task specific weight-sharing for training multiple sequence classification tasks simulataneously and has empirically showed resulting in more generalizable models. `Joint Learn` is a PyTorch based comprehensive toolkit for weight-sharing in text classification settings.
 
 
 ## Usage

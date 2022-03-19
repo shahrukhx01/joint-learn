@@ -107,9 +107,24 @@ Further, this framework allows an easy  **[fine-tuning of custom embeddings mode
 ```
 
 ### LSTM Self-Attention with Transformer Encoder
-[Full Example]()
+[Full Example](https://github.com/shahrukhx01/joint-learn/blob/main/joint_learn/examples/hindi_bengali_hasoc_2019/joint_learn_lstm_transformer_attention.py)
 ```python
-
+ ## init jl lstm Self-Attention with Transformer Encoder
+    jl_lstm = JLLSTMTransformerAttentionClassifier(
+        batch_size=batch_size,
+        hidden_size=hidden_size,
+        lstm_layers=lstm_layers,
+        embedding_size=embedding_size,
+        nhead=nhead,
+        transformer_hidden_size=transformer_hidden_size,
+        transformer_layers=transformer_layers,
+        dataset_hyperparams=dataset_hyperparams,
+        bidirectional=bidirectional,
+        fc_hidden_size=fc_hidden_size,
+        self_attention_config=self_attention_config,
+        device=device,
+        max_seq_length=max_seq_length,
+    )
 ```
 
 

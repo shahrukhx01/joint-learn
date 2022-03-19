@@ -1,5 +1,5 @@
 <!--- BADGES: START --->
-[![GitHub - License](https://img.shields.io/github/license/UKPLab/sentence-transformers?logo=github&style=flat&color=green)][#github-license]
+[![GitHub - License](https://img.shields.io/github/license/shahrukhx01/joint-learn?logo=github&style=flat&color=green)][#github-license]
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/sentence-transformers?logo=pypi&style=flat&color=blue)][#pypi-package]
 
 <!--- 

@@ -97,7 +97,6 @@ def main():
         max_epochs=max_epochs,
         config_dict={"device": device, "model_name": "jl_lstm"},
     )
-    ##print(sick_dataloaders.keys())"""
 
 
 if __name__ == "__main__":

@@ -74,7 +74,7 @@ class JLLSTMClassifier(nn.Module):
         )  ## init context and hidden weights for lstm cell
         embeddings = None
         for dataset in self.dataset_hyperparams:
-            if dataset["name"] == dataset_name:
+            if dataset["name"] == dataset_name[0]:
                 # embedded input of shape = (batch_size, num_sequences,  embedding_size)
                 embeddings = self.embeddings[dataset["name"]](batch)
 
@@ -83,16 +83,9 @@ class JLLSTMClassifier(nn.Module):
             packed_input, self.hidden
         )
         output = self.dropout_layer(final_hidden_state[-1])  ## to avoid overfitting
-        """final_output = None
+        final_output = None
         for dataset in self.dataset_hyperparams:
-            if dataset["name"] == dataset_name:
-                if dataset["labels"] == 1:
-                    final_output = self.sigmoid(
-                        self.out(output)
-                    )  ## using sigmoid since binary labels
-                else:
-                    final_output = self.softmax(
-                        self.out(output)
-                    )  ## using softmax since multiple labels"""
+            if dataset["name"] == dataset_name[0]:
+                final_output = self.outputs[dataset["name"]](output)
 
-        return self.out(output)
+        return final_output

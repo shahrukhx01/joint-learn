@@ -123,7 +123,7 @@ class JLData:
         )
 
         text_length_tensor = torch.LongTensor(text_lengths)  ## casting to long
-        target_tensor = torch.FloatTensor(targets)  ## casting to long
+        target_tensor = torch.LongTensor(targets)  ## casting to long
 
         return (
             padded_text_tensor,

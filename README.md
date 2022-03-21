@@ -1,9 +1,17 @@
 <!--- BADGES: START --->
 [![GitHub - License](https://img.shields.io/github/license/shahrukhx01/joint-learn?logo=github&style=flat&color=green)][#github-license]
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/sentence-transformers?logo=pypi&style=flat&color=blue)][#pypi-package]
-[![PyPI - Package Version](https://img.shields.io/pypi/v/sentence-transformers?logo=pypi&style=flat&color=orange)][#pypi-package]
 
-[#github-license]: https://github.com/UKPLab/sentence-transformers/blob/master/LICENSE
+<!--- 
+[![PyPI - Package Version](https://img.shields.io/pypi/v/sentence-transformers?logo=pypi&style=flat&color=orange)][#pypi-package]
+[![Conda - Platform](https://img.shields.io/conda/pn/conda-forge/sentence-transformers?logo=anaconda&style=flat)][#conda-forge-package]
+[![Conda (channel only)](https://img.shields.io/conda/vn/conda-forge/sentence-transformers?logo=anaconda&style=flat&color=orange)][#conda-forge-package]
+[![Docs - GitHub.io](https://img.shields.io/static/v1?logo=github&style=flat&color=pink&label=docs&message=sentence-transformers)][#docs-package]
+[![PyPI - Downloads](https://img.shields.io/pypi/dm/sentence-transformers?logo=pypi&style=flat&color=green)][#pypi-package]
+[![Conda](https://img.shields.io/conda/dn/conda-forge/sentence-transformers?logo=anaconda)][#conda-forge-package] 
+--->
+
+[#github-license]: https://github.com/shahrukhx01/joint-learn/blob/master/LICENSE
 [#pypi-package]: https://pypi.org/project/sentence-transformers/
 [#conda-forge-package]: https://anaconda.org/conda-forge/sentence-transformers
 [#docs-package]: https://www.sbert.net/
@@ -11,11 +19,7 @@
 
 # Joint Learn: A python toolkit for task-specific weight sharing for sequence classification
 
-This framework provides an easy method to compute dense vector representations for **sentences**, **paragraphs**, and **images**. The models are based on transformer networks like BERT / RoBERTa / XLM-RoBERTa etc. and achieve state-of-the-art performance in various task. Text is embedding in vector space such that similar text is close and can efficiently be found using cosine similarity.
-
-We provide an increasing number of **[state-of-the-art pretrained models](https://www.sbert.net/docs/pretrained_models.html)** for more than 100 languages, fine-tuned for various use-cases.
-
-Further, this framework allows an easy  **[fine-tuning of custom embeddings models](https://www.sbert.net/docs/training/overview.html)**, to achieve maximal performance on your specific task.
+Transfer Learning has achieved state-of-the-art results recently in Machine Learning and specially, Natural Language Processing tasks. However, for low resource corporas where there is a lack of pre-trained model checkpoints available. We propose `Joint Learn` which leverages task specific weight-sharing for training multiple sequence classification tasks simulataneously and has empirically showed resulting in more generalizable models. `Joint Learn` is a PyTorch based comprehensive toolkit for weight-sharing in text classification settings.
 
 
 ## Usage

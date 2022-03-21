@@ -17,9 +17,9 @@ def main():
     bengali_hasoc_name = "bengali-hasoc"
     bengali_hasoc = JLData(
         dataset_path={
-            "train": "/Users/shahrukh/Desktop/bengali_hatespeech.csv",
-            "test": "/Users/shahrukh/Desktop/bengali_hatespeech.csv",
-            "validation": "/Users/shahrukh/Desktop/bengali_hatespeech.csv",
+            "train": "joint_learn/examples/hindi_bengali_hasoc_2019/data/bengali_hatespeech.csv",
+            "test": "joint_learn/examples/hindi_bengali_hasoc_2019/data/bengali_hatespeech.csv",
+            "validation": "joint_learn/examples/hindi_bengali_hasoc_2019/data/bengali_hatespeech.csv",
         },
         dataset_name=bengali_hasoc_name,
         columns_mapping={
@@ -27,19 +27,19 @@ def main():
             "label": "hate",
         },
         embeddings_path={
-            "path": "/Users/shahrukh/Downloads/",
+            "path": "joint_learn/examples/hindi_bengali_hasoc_2019/data/",
             "name": "cc.bn.300.vec.gz",
         },
-        stopwords_path="/Users/shahrukh/Desktop/geonetwork-ben.txt",
+        stopwords_path="joint_learn/examples/hindi_bengali_hasoc_2019/data/geonetwork-ben.txt",
     )
     bengali_hasoc_dataloaders = bengali_hasoc.get_data_loader(batch_size=batch_size)
 
     hindi_hasoc_name = "hindi-hasoc"
     hindi_hasoc = JLData(
         dataset_path={
-            "train": "/Users/shahrukh/Desktop/hindi_hatespeech.csv",
-            "test": "/Users/shahrukh/Desktop/hindi_hatespeech.csv",
-            "validation": "/Users/shahrukh/Desktop/hindi_hatespeech.csv",
+            "train": "joint_learn/examples/hindi_bengali_hasoc_2019/data/hindi_hatespeech.csv",
+            "test": "joint_learn/examples/hindi_bengali_hasoc_2019/data/hindi_hatespeech.csv",
+            "validation": "joint_learn/examples/hindi_bengali_hasoc_2019/data/hindi_hatespeech.csv",
         },
         dataset_name=hindi_hasoc_name,
         columns_mapping={
@@ -47,10 +47,10 @@ def main():
             "label": "task_1",
         },
         embeddings_path={
-            "path": "/Users/shahrukh/Downloads/",
+            "path": "joint_learn/examples/hindi_bengali_hasoc_2019/data/",
             "name": "cc.hi.300.vec.gz",
         },
-        stopwords_path="/Users/shahrukh/Desktop/geonetwork-hin.txt",
+        stopwords_path="joint_learn/examples/hindi_bengali_hasoc_2019/data/geonetwork-hin.txt",
     )
     hindi_hasoc_dataloaders = hindi_hasoc.get_data_loader(batch_size=batch_size)
 

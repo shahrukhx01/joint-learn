@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+set -ex
+export PYTHONPATH=$PYTHONPATH:/root/capsule/code/joint_learn/
+#pip install -r requirements.txt
+
+#curl -L -o "./joint_learn/examples/hindi_bengali_hasoc_2019/data/cc.bn.300.vec.gz" https://dl.fbaipublicfiles.com/fasttext/vectors-crawl/cc.bn.300.vec.gz
+curl -L -o "./joint_learn/examples/hindi_bengali_hasoc_2019/data/cc.hi.300.vec.gz" https://dl.fbaipublicfiles.com/fasttext/vectors-crawl/cc.hi.300.vec.gz
+
+# This is the master script for the capsule. When you click "Reproducible Run", the code in this file will execute.
+python -u ./joint_learn/examples/hindi_bengali_hasoc_2019/joint_learn_lstm.py "$@"
+

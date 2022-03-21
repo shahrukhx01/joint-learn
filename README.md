@@ -20,9 +20,9 @@
 # Joint Learn: A python toolkit for task-specific weight sharing for sequence classification
 
 Transfer Learning has achieved state-of-the-art results recently in Machine Learning and specially, Natural Language Processing tasks. However, for low resource corporas where there is a lack of pre-trained model checkpoints available. We propose `Joint Learn` which leverages task specific weight-sharing for training multiple sequence classification tasks simulataneously and has empirically showed resulting in more generalizable models. `Joint Learn` is a PyTorch based comprehensive toolkit for weight-sharing in text classification settings.
-Solarized dark             |  Solarized Ocean
+Joint Learn LSTM Self Attention            |  Joint Learn Transformer LSTM Self Attention 
 :-------------------------:|:-------------------------:
-![](https://raw.githubusercontent.com/shahrukhx01/joint-learn/main/joint_learn/img/lstm.jpg)  |  ![](https://raw.githubusercontent.com/shahrukhx01/joint-learn/main/joint_learn/img/lstm.jpg)
+![](https://raw.githubusercontent.com/shahrukhx01/joint-learn/main/joint_learn/img/lstm.jpg)  |  ![](https://raw.githubusercontent.com/shahrukhx01/joint-learn/main/joint_learn/img/lstm_transformer.jpg)
 
 
 ## Usage

@@ -4,9 +4,6 @@ from sklearn.metrics import accuracy_score
 import logging
 from tqdm import tqdm
 from torch.autograd import Variable
-import transformers
-from torch.utils.data.distributed import DistributedSampler
-from torch.utils.data.sampler import RandomSampler
 import numpy as np
 
 logging.basicConfig(level=logging.INFO)

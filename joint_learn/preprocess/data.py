@@ -3,7 +3,6 @@ from joint_learn.preprocess.preprocess import Preprocess
 import logging
 import torch
 from joint_learn.preprocess.dataset import JLDataset
-from datasets import load_dataset
 import torchtext
 from torchtext.data.utils import get_tokenizer
 import transformers
@@ -154,38 +153,6 @@ class JLData:
         features["labels"] = example_batch[self.columns_mapping["label"]]
 
         return features
-
-    def get_dataset_bert(self):
-        """
-        Converts raw data sequences into vectorized sequences as tensors
-        """
-
-        dataset = {"train": load_dataset(self.dataset_name, split="train")}
-        features_dict = {}
-
-        ## get the text sequence from dataframe
-        for phase, phase_dataset in dataset.items():
-            features_dict[phase] = phase_dataset.map(
-                self.bert_convert_to_features,
-                batched=True,
-                load_from_cache_file=False,
-            )
-            print(
-                phase,
-                len(phase_dataset),
-                len(features_dict[phase]),
-            )
-            features_dict[phase].set_format(
-                type="torch",
-                columns=["input_ids", "attention_mask", "labels"],
-            )
-            print(
-                phase,
-                len(phase_dataset),
-                len(features_dict[phase]),
-            )
-
-        return features_dict["train"]
 
     def get_data_loader(self, batch_size=8):
         jl_dataloaders = {}

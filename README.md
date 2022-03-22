@@ -16,7 +16,7 @@
 [#pypi-package]: https://pypi.org/project/sentence-transformers/
 [#conda-forge-package]: https://anaconda.org/conda-forge/sentence-transformers
 [#docs-package]: https://www.sbert.net/
-<!--- BADGES: END --->
+<!---BADGES: END--->
 
 # Joint Learn: A python toolkit for task-specific weight sharing for sequence classification
 

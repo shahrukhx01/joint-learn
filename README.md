@@ -142,13 +142,15 @@ If you find this repository helpful, feel free to cite our publication [Hindi/Be
 
 
 ```bibtex
-@misc{khan2022hindibengali,
-      title={Hindi/Bengali Sentiment Analysis Using Transfer Learning and Joint Dual Input Learning with Self Attention}, 
-      author={Shahrukh Khan and Mahnoor Shahid},
-      year={2022},
-      eprint={2202.05457},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
+@inproceedings{bertprobe,
+  author    = {Shahrukh Khan and
+               Mahnoor Shahid and
+               Navdeeppal Singh},
+  title     = {White-Box Attacks on Hate-speech BERT Classifiers in German with Explicit and Implicit Character Level Defense},
+  booktitle = {BOHR International Journal of Intelligent Instrumentation and Computing, 2022},
+  publisher = {BOHR Publishers},
+  year      = {2022},
+  url       = {https://bohrpub.com/journals/BIJIIAC/Vol1N1/BIJIIAC_20221104.html}
 }
 ```
 

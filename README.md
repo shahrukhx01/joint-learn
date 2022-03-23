@@ -142,15 +142,23 @@ If you find this repository helpful, feel free to cite our publication [Hindi/Be
 
 
 ```bibtex
-@inproceedings{bertprobe,
-  author    = {Shahrukh Khan and
-               Mahnoor Shahid and
-               Navdeeppal Singh},
-  title     = {White-Box Attacks on Hate-speech BERT Classifiers in German with Explicit and Implicit Character Level Defense},
-  booktitle = {BOHR International Journal of Intelligent Instrumentation and Computing, 2022},
-  publisher = {BOHR Publishers},
-  year      = {2022},
-  url       = {https://bohrpub.com/journals/BIJIIAC/Vol1N1/BIJIIAC_20221104.html}
+@misc{https://doi.org/10.48550/arxiv.2202.05457,
+  doi = {10.48550/ARXIV.2202.05457},
+  
+  url = {https://arxiv.org/abs/2202.05457},
+  
+  author = {Khan, Shahrukh and Shahid, Mahnoor},
+  
+  keywords = {Computation and Language (cs.CL), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  
+  title = {Hindi/Bengali Sentiment Analysis Using Transfer Learning and Joint Dual Input Learning with Self Attention},
+  
+  publisher = {arXiv},
+  
+  year = {2022},
+  
+  copyright = {Creative Commons Attribution 4.0 International}
 }
+
 ```
 

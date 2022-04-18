@@ -142,22 +142,11 @@ If you find this repository helpful, feel free to cite our publication [Hindi/Be
 
 
 ```bibtex
-@misc{https://doi.org/10.48550/arxiv.2202.05457,
-  doi = {10.48550/ARXIV.2202.05457},
-  
-  url = {https://arxiv.org/abs/2202.05457},
-  
-  author = {Khan, Shahrukh and Shahid, Mahnoor},
-  
-  keywords = {Computation and Language (cs.CL), FOS: Computer and information sciences, FOS: Computer and information sciences},
-  
-  title = {Hindi/Bengali Sentiment Analysis Using Transfer Learning and Joint Dual Input Learning with Self Attention},
-  
-  publisher = {arXiv},
-  
-  year = {2022},
-  
-  copyright = {Creative Commons Attribution 4.0 International}
+@article{khan2022hindi,
+  title={Hindi/Bengali Sentiment Analysis Using Transfer Learning and Joint Dual Input Learning with Self Attention},
+  author={Khan, Shahrukh and Shahid, Mahnoor},
+  journal={BOHR International Journal of Research on Natural Language Computing (BIJRNLC)},
+  year={2022}
 }
 
 ```
